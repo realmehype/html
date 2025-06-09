@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OriginOS Web</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 2.5em;
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .app {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 1.2em;
+      transition: transform 0.3s, background 0.3s;
+      animation: popIn 0.5s ease forwards;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .app:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>OriginOS Web</h1>
+  <div class="apps">
+    <div class="app">📷 Камера</div>
+    <div class="app">🖼️ Галерея</div>
+    <div class="app">⚙️ Настройки</div>
+    <div class="app">🌐 Браузер</div>
+    <div class="app">🎵 Музыка</div>
+    <div class="app">📁 Файлы</div>
+  </div>
+</body>
+</html>
